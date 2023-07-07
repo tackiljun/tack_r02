@@ -4,7 +4,7 @@ import BasicLayout from "../../layouts/BasicLayout";
 const IndexPage = () => {
     return ( 
         <BasicLayout>
-            <div className="m-4 p-4 bg-yellow-400 text-2xl text-white flex justify-center">
+            <div className="m-4 p-4 bg-black text-2xl text-white flex justify-center">
                 <div className="underline font-extrabold m-2 p-2">LIST</div>
                 <div className="underline font-extrabold m-2 p-2">REGISTER</div>
             </div>

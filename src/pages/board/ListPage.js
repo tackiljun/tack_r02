@@ -1,6 +1,8 @@
 import { useSearchParams } from "react-router-dom";
 import BasicLayout from "../../layouts/BasicLayout";
 import ListComponent from "../../components/board/ListComponent";
+import ListSearchComponent from "../../components/board/ListSearchComponent";
+
 
 const checkNull = (obj) => {
 
@@ -10,12 +12,12 @@ const checkNull = (obj) => {
         const attrName = attr
         const attrValue = obj[attr]
 
-    if( attrValue && attrValue !== 'null') {
-      result[attrName] = attrValue
-    }
-  }
+        if( attrValue && attrValue !== 'null') {
+        result[attrName] = attrValue
+        }   
+    } 
 
-  return result
+    return result
 }
 
 const ListPage = () => {
@@ -41,10 +43,19 @@ const ListPage = () => {
     }
 
     //console.log("--------------- BOARD LIST ---------------")
+    const moveSearch = (type, keyword) => {
+        queryObj.page = 1
+        queryObj.type = type
+        queryObj.keyword = keyword
+
+        setSearch({...queryObj})
+    }
 
     return ( 
         <div>
             BOARD LIST PAGE
+            <ListSearchComponent queryObj={queryObj} moveSearch={moveSearch}></ListSearchComponent>
+
             <ListComponent queryObj={queryObj} movePage={movePage}></ListComponent>
         </div>
      );

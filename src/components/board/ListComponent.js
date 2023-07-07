@@ -3,6 +3,7 @@ import { createSearchParams } from "react-router-dom";
 import { getList } from "../../api/boardAPI";
 
 
+
 const initState = {
     dtoList:[],
     end:0,
@@ -37,6 +38,9 @@ const ListComponent = ({queryObj, movePage}) => {
     return ( 
         <div>
             <div>LIST COMPONENT</div>
+
+            
+
             <div>
                 <ul>
                     {listData.dtoList.map(dto => 
