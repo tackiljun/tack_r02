@@ -1,4 +1,4 @@
-import { useSearchParams } from "react-router-dom";
+import { createSearchParams, useNavigate, useSearchParams } from "react-router-dom";
 import BasicLayout from "../../layouts/BasicLayout";
 import ListComponent from "../../components/board/ListComponent";
 import ListSearchComponent from "../../components/board/ListSearchComponent";
@@ -23,6 +23,8 @@ const checkNull = (obj) => {
 const ListPage = () => {
 
     const [search, setSearch] = useSearchParams()
+
+    const navigate = useNavigate()
 
     console.log(search)
 
@@ -51,12 +53,24 @@ const ListPage = () => {
         setSearch({...queryObj})
     }
 
+    const moveRead = (bno) => {
+
+        console.log("moveRead: " + bno)
+
+        const queryString = createSearchParams(queryObj).toString()
+
+        navigate(`/board/read/${bno}?${queryString}`)
+
+    }
+
     return ( 
         <div>
             BOARD LIST PAGE
-            <ListSearchComponent queryObj={queryObj} moveSearch={moveSearch}></ListSearchComponent>
+            <ListSearchComponent queryObj={queryObj} moveSearch={moveSearch}>
+            </ListSearchComponent>
 
-            <ListComponent queryObj={queryObj} movePage={movePage}></ListComponent>
+            <ListComponent queryObj={queryObj} movePage={movePage} moveRead={moveRead}>
+            </ListComponent>
         </div>
      );
 }

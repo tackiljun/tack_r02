@@ -33,8 +33,8 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
                 <option value={'t'}>제목</option>
                 <option value={'c'}>내용</option>
                 <option value={'w'}>작성자</option>
-                <option value={'tc'}>제목내용</option>
-                <option value={'tcw'}>제목내용작성자</option>
+                <option value={'tc'}>제목+내용</option>
+                <option value={'tcw'}>제목+내용+작성자</option>
             </select>
 
             <input type="text" 
@@ -43,7 +43,8 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
             onChange={ e => {
                 searchObj.keyword = e.target.value
                 setSearchObj({...searchObj})
-            }}></input>
+            }}>
+            </input>
 
             <button className="m-2 p-2 bg-black border-2"
             onClick={ e => moveSearch(searchObj.type, searchObj.keyword)}>
