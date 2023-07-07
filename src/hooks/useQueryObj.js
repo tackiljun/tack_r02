@@ -35,6 +35,7 @@ const useQueryObj = () => {
 
     navigate(`../list?${queryString}`)
   }
+  
   const moveRead = (bno) => {
     console.log("moveRead: " + bno)
 
@@ -44,7 +45,7 @@ const useQueryObj = () => {
 
   }
 
-  return [queryObj, setSearch, moveRead, moveList]
+  return {queryObj, setSearch, moveRead, moveList}
 }
 
 export default useQueryObj
