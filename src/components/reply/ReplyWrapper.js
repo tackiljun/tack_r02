@@ -45,7 +45,6 @@ const ReplyWrapper = ({bno}) => {
     }
 
     const refreshLast = () =>{
-
         data.last = true
         data.refresh = !data.refresh
         setData({...data})
@@ -55,14 +54,23 @@ const ReplyWrapper = ({bno}) => {
         data.current = 0
         setData({...data})
     }
+
+    const refreshPage = () => {
+        data.refresh = !data.refresh
+        setData({...data})
+    }
    
     return (  
         <div>
-            <ReplyInput bno={bno} refreshLast={refreshLast}></ReplyInput>
+            <ReplyInput bno={bno} refreshLast={refreshLast}>
+            </ReplyInput>
 
-            {data.current !== 0 ? <ReplyRead rno={data.current} cancleRead={cancleRead}></ReplyRead>:<></>}
+            {data.current !== 0 ? 
+            <ReplyRead rno={data.current} cancleRead={cancleRead} refreshPage={refreshPage}>
+            </ReplyRead>:<></>}
 
-            <ReplyList {...data} movePage={movePage} changeCurrent={changeCurrent}></ReplyList>
+            <ReplyList {...data} movePage={movePage} changeCurrent={changeCurrent}>
+            </ReplyList>
         </div>
     );
 }

@@ -45,7 +45,7 @@ const ListPage = () => {
 
     return ( 
         <div>
-          Board List Page
+          BOARD LIST PAGE
           <ListSearchComponent moveSearch={moveSearch} queryObj={queryObj}>
           </ListSearchComponent>
     

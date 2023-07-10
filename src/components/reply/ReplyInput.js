@@ -39,7 +39,7 @@ const ReplyInput = ({bno, refreshLast}) => {
     }
  
     return ( 
-        <div className="m-8 bg-red-600 border-2 text-white">
+        <div className="m-4 bg-red-600 border-2 text-white">
             <div>REPLY INPUT</div>
             <div className="m-2">
                 <input

@@ -5,8 +5,8 @@ const IndexPage = () => {
     return ( 
         <BasicLayout>
             <div className="m-4 p-4 bg-black text-2xl text-white flex justify-center">
-                <div className="underline font-extrabold m-2 p-2">LIST</div>
-                <div className="underline font-extrabold m-2 p-2">REGISTER</div>
+                <div className="underline font-extrabold m-2 p-2 border-2">LIST</div>
+                <div className="underline font-extrabold m-2 p-2 border-2">REGISTER</div>
             </div>
             <div className="bg-black w-full border-2">
                 <Outlet></Outlet>
