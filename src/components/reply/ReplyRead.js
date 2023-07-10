@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { deleteReply, getReply } from "../../api/repliesAPI";
+import { deleteReply, getReply, putReply } from "../../api/repliesAPI";
 
 const initState = {
     rno:0,
@@ -32,22 +32,44 @@ const ReplyRead = ({rno, cancleRead, refreshPage}) => {
         })
     }
 
+    const handleChange = (e) => {
+        reply[e.target.name] = e.target.value
+        setReply({...reply})
+    }
+
+    const handleClickModify = () => {
+        putReply(reply).then(data => {
+            alert(`${data.result} 수정되었습니다.....`)
+            refreshPage()
+        })
+    }
+
+    if(reply.replyText === '해당 글은 삭제되었습니다.....') {
+        return <></>
+    }
+
     return ( 
-        <div className="m-4 bg-red-600 border-2 text-white">
-            <div>REPLY READ {rno}</div>
-            <div>
+        <div className="m-4 bg-blue-300 border-2">
+            <div className="m-2">REPLY READ {rno}</div>
+            <div className="m-2">
                 <div>{rno}</div>
-                <div>{reply.replyText}</div>
+                <div>
+                    <input 
+                    className="bg-blue-100" type="text" 
+                    name="replyText" onChange={handleChange} 
+                    value={reply.replyText}>
+                    </input>
+                </div>
                 <div>{reply.replyer}</div>
             </div>
             <div>
-                <button className="m-2 p-2 border-2">
+                <button className="m-2 p-2 bg-blue-100 border-2" onClick={handleClickModify}>
                     MODIFY
                 </button>
-                <button className="m-2 p-2 border-2" onClick={handleClickDelete}>
+                <button className="m-2 p-2 bg-blue-100 border-2" onClick={handleClickDelete}>
                     DELETE
                 </button>
-                <button className="m-2 p-2 border-2" onClick={cancleRead}>
+                <button className="m-2 p-2 bg-blue-100 border-2" onClick={cancleRead}>
                     CANCLE
                 </button>
             </div>

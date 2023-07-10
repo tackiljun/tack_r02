@@ -3,7 +3,7 @@ import TestLayout from "../layouts/TestLayout";
 
 const AboutPage = () => {
 
-    console.log("--------------- ABOUT ---------------")
+    //console.log("--------------- ABOUT ---------------")
 
     return ( 
         <BasicLayout>

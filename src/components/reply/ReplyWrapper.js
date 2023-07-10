@@ -3,7 +3,7 @@ import ReplyList from "./ReplyList";
 import ReplyInput from "./ReplyInput";
 import ReplyRead from "./ReplyRead";
 
-// 상태값 초기화
+// 상태값 초기화.
 const initState = {
     bno: 0,
     page: 1,
@@ -55,8 +55,13 @@ const ReplyWrapper = ({bno}) => {
         setData({...data})
     }
 
-    const refreshPage = () => {
+    const refreshPage = (hide) => {
         data.refresh = !data.refresh
+
+        if(hide) {
+            data.refresh = !data.refresh
+        }
+
         setData({...data})
     }
    

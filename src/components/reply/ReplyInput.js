@@ -11,7 +11,7 @@ const initState = {
 
 const ReplyInput = ({bno, refreshLast}) => {
 
-    const [reply, setReply] = useState(initState)
+    const [reply, setReply] = useState({...initState})
 
 
     const handleChange = (e) => {
@@ -39,20 +39,20 @@ const ReplyInput = ({bno, refreshLast}) => {
     }
  
     return ( 
-        <div className="m-4 bg-red-600 border-2 text-white">
-            <div>REPLY INPUT</div>
+        <div className="m-4 bg-blue-300 border-2">
+            <div className="m-2">REPLY INPUT</div>
             <div className="m-2">
                 <input
-                 className="bg-black text-white"
+                 className="bg-blue-100"
                  type="text" name="replyText" value={reply.replyText} onChange={handleChange}></input>
             </div>
             <div className="m-2">
                 <input
-                 className="bg-black text-white"
+                 className="bg-blue-100"
                  type="text" name="replyer" value={reply.replyer} onChange={handleChange}></input>
             </div>
             <div className="m-2">
-                <button className="border-2" onClick={handleClickRegister}>REGISTER</button>
+                <button className="bg-blue-100 border-2" onClick={handleClickRegister}>REGISTER</button>
             </div>
         </div>
      );

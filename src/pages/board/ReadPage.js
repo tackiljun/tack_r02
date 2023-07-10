@@ -16,8 +16,10 @@ const ReadPage = () => {
 
     return ( 
         <div>
-            BOARD READ PAGE
-            <ReadComponent bno={bno}></ReadComponent>
+            <div className="m-4">
+                BOARD READ PAGE
+                <ReadComponent bno={bno}></ReadComponent>
+            </div>
 
             <ReplyWrapper bno={bno}></ReplyWrapper>
 

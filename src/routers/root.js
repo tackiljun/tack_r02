@@ -6,6 +6,7 @@ import IndexPage from "../pages/board/IndexPage";
 
 import { Suspense, lazy } from "react";
 import LoadingPage from "../pages/LoadingPage";
+import MyPage from "../pages/MyPage";
 
 const Loading = <LoadingPage></LoadingPage>
 const Board_Index = lazy(() => import("../pages/board/IndexPage"))
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
     {
         path:"about",
         element: <AboutPage></AboutPage>
+    }
+    ,
+    {
+        path:"mypage",
+        element: <MyPage></MyPage>
     }
     ,
     {

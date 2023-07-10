@@ -26,8 +26,9 @@ const ListComponent = ({queryObj, movePage, moveRead}) => {
     useEffect(() => {
 
         getList(queryObj).then(data => {
+            //console.log("===================================================================")
             console.log(data)
-            setListData(data)
+            setListData({...data})
         })
 
     }, [queryObj])
@@ -35,15 +36,49 @@ const ListComponent = ({queryObj, movePage, moveRead}) => {
     
 
     return ( 
+
         <div>
-            <div>LIST COMPONENT</div>
-            <div>
-                <ul>
+            <div className="m-4">
+                LIST COMPONENT
+                {/* <ul className="border-y-2 border-x-2 ">
+                    <li> NUM - TITLE - REPLYCOUNT - REGDATE </li>
                     {listData.dtoList.map(dto => 
-                        <li key={dto.bno} onClick={() => moveRead(dto.bno)}>
-                            {dto.bno} - {dto.title} - {dto.replyCount}
+                        <li 
+                        className="border-y-2"
+                        key={dto.bno} onClick={() => moveRead(dto.bno)}>
+                            {dto.bno} - {dto.title} - {dto.replyCount} - {dto.regDate}
                         </li>)}
-                </ul>
+                </ul> */}
+                <table className="min-w-[1280px] ml-auto mr-auto">
+                    <thead>
+                        <tr className="h-12 bg-blue-300">
+                            <th className="border-2 font-bold m-2"
+                            style={{ width: '5%' }}>NO.</th>
+                            <th className="border-2 font-bold m-2"
+                            style={{ width: '70%' }}>TITLE</th>
+                            <th className="border-2 font-bold m-2"
+                            style={{ width: '10%' }}>WRITER</th>
+                            <th className="border-2 font-bold m-2"
+                            style={{ width: '15%' }}>REGDATE</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {listData.dtoList.map(({bno,title,replyCount,writer,regDate}) =>
+                        <tr
+                        className="text-center h-10 bg-blue-200 border-2"
+                        key={bno}
+                        onClick={() => moveRead(bno)}>               
+                            <td className="w-10 border-2 ">{bno}</td>
+                            <td className="w-96 border-2 hover:underline hover:cursor-pointer">
+                                {title}&nbsp;&nbsp;[{replyCount}]
+                            </td>
+                            <td className="w-10 border-2 ">{writer}</td>
+                            <td className="w-10 border-2 ">{regDate}</td>
+                        </tr>
+                        )}
+                    </tbody>               
+                </table>
             </div>
 
             <ListPageComponent movePage={movePage} {...listData}>
