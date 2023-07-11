@@ -7,7 +7,7 @@ const MainPage = () => {
 
     return ( 
         <BasicLayout>
-            <h2 className="m-4">MAIN PAGE</h2>
+            <h2 className="m-auto text-center">MAIN PAGE</h2>
             <div>
                 <img className="mx-auto" src={require("../images/mainimg1.jpg")} />
             </div>

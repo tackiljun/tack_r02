@@ -6,7 +6,7 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
     //     moveSearch('t', '1')
     // }, 2000)
 
-    console.log("--------------------SearchComponent--------------------")
+    //console.log("--------------------SearchComponent--------------------")
     // console.log(queryObj)
     const [searchObj, setSearchObj] = useState({type:'', keyword:''})
 
@@ -24,7 +24,7 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
         <div className="m-4 p-4 bg-blue-300 border-2">
 
             <select className="m-2 p-2 bg-blue-100 border-2" 
-            value={'searchObj.type'}
+            value={searchObj.type}
             onChange={ e => {
                 searchObj.type = e.target.value
                 setSearchObj({...searchObj})

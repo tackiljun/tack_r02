@@ -41,8 +41,8 @@ const ReplyList = ({bno, page, last, refresh, movePage, changeCurrent}) => {
     }, [bno, page, refresh, last])
 
     return ( 
-        <div className="m-6">
-            <div>
+        <div className="m-auto">
+            <div className="text-center">
                 REPLY LIST
             </div>
             <div>
@@ -52,7 +52,7 @@ const ReplyList = ({bno, page, last, refresh, movePage, changeCurrent}) => {
                         {reply.rno} -- {reply.replyText}
                     </li>)}
                 </ul> */}
-                <table className="min-w-[1280px] ml-auto mr-auto">
+                <table className="m-auto w-5/6 ">
                     <thead>
                         <tr className="h-12 bg-blue-300">
                             <th className="border-2 font-bold m-2"
@@ -73,7 +73,7 @@ const ReplyList = ({bno, page, last, refresh, movePage, changeCurrent}) => {
                         onClick={() => changeCurrent(rno)}>               
                             <td className="w-10 border-2 ">{rno}</td>
                             <td className="w-96 border-2 hover:underline hover:cursor-pointer">
-                                {replyText}&nbsp;&nbsp;[{replyFile}]
+                                {replyText}&nbsp;&nbsp;
                             </td>
                             <td className="w-10 border-2 ">{replyer}</td>
                         </tr>

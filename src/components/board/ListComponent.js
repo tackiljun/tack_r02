@@ -38,7 +38,7 @@ const ListComponent = ({queryObj, movePage, moveRead}) => {
     return ( 
 
         <div>
-            <div className="m-4">
+            <div className="m-auto text-center">
                 LIST COMPONENT
                 {/* <ul className="border-y-2 border-x-2 ">
                     <li> NUM - TITLE - REPLYCOUNT - REGDATE </li>

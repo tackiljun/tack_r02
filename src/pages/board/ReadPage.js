@@ -16,11 +16,13 @@ const ReadPage = () => {
 
     return ( 
         <div>
-            <div className="m-4">
+            <div className="m-auto text-center">
                 BOARD READ PAGE
-                <ReadComponent bno={bno}></ReadComponent>
+                <div>
+                    <ReadComponent  bno={bno}></ReadComponent>
+                </div>
             </div>
-
+                
             <ReplyWrapper bno={bno}></ReplyWrapper>
 
             <button onClick={moveList}>LIST</button>

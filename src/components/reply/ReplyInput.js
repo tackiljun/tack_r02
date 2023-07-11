@@ -39,19 +39,19 @@ const ReplyInput = ({bno, refreshLast}) => {
     }
  
     return ( 
-        <div className="m-4 bg-blue-300 border-2">
-            <div className="m-2">REPLY INPUT</div>
-            <div className="m-2">
+        <div className="m-auto w-1/5 bg-blue-300 border-2">
+            <div className="text-center">REPLY INPUT</div>
+            <div className="m-2 text-center">
                 <input
                  className="bg-blue-100"
                  type="text" name="replyText" value={reply.replyText} onChange={handleChange}></input>
             </div>
-            <div className="m-2">
+            <div className="m-2 text-center">
                 <input
                  className="bg-blue-100"
                  type="text" name="replyer" value={reply.replyer} onChange={handleChange}></input>
             </div>
-            <div className="m-2">
+            <div className="m-2 text-center">
                 <button className="bg-blue-100 border-2" onClick={handleClickRegister}>REGISTER</button>
             </div>
         </div>
