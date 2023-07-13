@@ -17,6 +17,9 @@ const ReadComponent = ({pno, moveModify, moveList}) => {
 
     getProduct(pno).then(data => {
       setProduct(data)
+    }).catch(e => {
+      console.log(e)
+      moveList()
     })
 
   }, [pno])
@@ -33,7 +36,7 @@ const ReadComponent = ({pno, moveModify, moveList}) => {
         {product.price}
       </div>
       <div className="m-2 p-2 border-2">
-        <ul className="list-none flex">
+        <ul className="list-none">
           {product.images.map( (fname, idx) => 
             <li key={idx}>
               <img className="inline-block" src={`http://localhost/${fname}`}/>
