@@ -1,5 +1,6 @@
 import { createSearchParams, useNavigate, useSearchParams } from "react-router-dom"
 
+
 const checkNull = (obj) => {
 
   const result = {}
@@ -15,6 +16,7 @@ const checkNull = (obj) => {
 
   return result
 }
+
 
 const useQueryObj = () => {
 
@@ -35,17 +37,24 @@ const useQueryObj = () => {
 
     navigate(`../list?${queryString}`)
   }
-  
+
   const moveRead = (bno) => {
     console.log("moveRead: " + bno)
 
     const queryString = createSearchParams (queryObj).toString()
 
     navigate(`../read/${bno}?${queryString}`)
+  }
+  
+  const moveModify = (bno) => {
+    console.log("moveModify: " + bno)
 
+    const queryString = createSearchParams (queryObj).toString()
+
+    navigate(`../modify/${bno}?${queryString}`)
   }
 
-  return {queryObj, setSearch, moveRead, moveList}
+  return {queryObj, setSearch, moveRead, moveList, moveModify}
 }
 
 export default useQueryObj
