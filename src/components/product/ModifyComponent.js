@@ -63,6 +63,8 @@ const handleClickModify = () => {
 
     putProduct(formData).then(data => {
         console.log(data)
+        alert("수정되었습니다.....")
+        moveRead(pno)
     })
 }
 

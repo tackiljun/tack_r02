@@ -52,7 +52,7 @@ const RegisterComponent = ({moveList}) => {
 
     return ( 
 
-        <div className="m-2 p-2">
+        <div className="m-2 p-2 bg-blue-200">
             
             <div className="m-2 p-2 border-2">
                 <input type='text' name='pname' value={product.pname} onChange={handleChange}></input>
@@ -67,12 +67,12 @@ const RegisterComponent = ({moveList}) => {
             </div>
 
             <div className="m-2 p-2 border-2"> 
-                <input type='file' ref={fileRef} multiple name='images' onChange={handleChange}></input>
+                <input className="m-auto items-center" type='file' ref={fileRef} multiple name='images' onChange={handleChange}></input>
             </div>
 
             <div className="m-2 p-2 border-2">
-                <button onClick={handleClickSave}>SAVE</button>
-                <button onClick={handleClickClear}>CLEAR FILES</button>
+                <button className="m-2 p-2 bg-blue-300 border-2" onClick={handleClickSave}>SAVE</button>
+                <button className="m-2 p-2 bg-blue-300 border-2" onClick={handleClickClear}>CLEAR FILES</button>
             </div>
         </div>
      );
