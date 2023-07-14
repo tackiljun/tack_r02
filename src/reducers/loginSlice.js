@@ -14,7 +14,7 @@ const loginSlice = createSlice({
             const payload = param.payload
             console.log("requestLogin", payload)
 
-            return {email: payload.email, signed:true}
+            return {email:payload.email, signed:true}
         }
     }
 })

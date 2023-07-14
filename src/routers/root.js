@@ -33,7 +33,10 @@ const router = createBrowserRouter([
         element: <AboutPage></AboutPage>
     }
     ,
-    
+    {
+      path: "member/login",
+      element: <Suspense fallback={Loading}><Member_Login/></Suspense>,
+    }
     ,
     {
         path:"mypage",
@@ -47,11 +50,6 @@ const router = createBrowserRouter([
             {
                 path: "list",
                 element: <Suspense fallback={Loading}><Board_List /></Suspense>
-            }
-            ,
-            {
-              path:"member/login",
-              element: <Suspense fallback={Loading}><Member_Login></Member_Login></Suspense>
             }
             ,
             {

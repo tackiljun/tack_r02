@@ -35,7 +35,7 @@ const LoginComponent = () => {
                 </input>
             </div>
             <div>
-                <button onClick={() => requestLogin(loginInfo)}>LOGIN</button>
+                <button onClick={() => dispatch(requestLogin(loginInfo))}>LOGIN</button>
             </div>
         </div>
      );

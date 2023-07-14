@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const LoginNav = () => {
 
-    const {email, signed} = useSelector(state => state.logn)
+    const {email, signed} = useSelector(state => state.login)
 
     console.log("LoginNav.....", email, signed)
 
