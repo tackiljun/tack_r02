@@ -16,6 +16,7 @@ const TodoInput = () => {
         <div>
             TODO INPUT
             <input 
+            className="m-2 p-2"
             type="text" 
             value={text} 
             onChange={e => setText(e.target.value)}>

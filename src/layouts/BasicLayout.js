@@ -7,7 +7,7 @@ const BasicLayout = ({children}) => {
             <div>
                 <SampleNav></SampleNav>
             </div>
-            <div className="bg-blue-200">
+            <div  className="m-4 p-4 bg-blue-100">
                 {children}
             </div>
         </div>

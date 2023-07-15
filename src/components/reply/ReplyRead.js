@@ -49,13 +49,13 @@ const ReplyRead = ({rno, cancleRead, refreshPage}) => {
     }
 
     return ( 
-        <div className="m-auto w-1/5 bg-blue-300 border-2">
+        <div className="m-auto w-1/4 bg-blue-200 border-2">
             <div className="text-center">REPLY READ {rno}</div>
             <div className="text-center">
                 <div>{rno}</div>
                 <div>
                     <input 
-                    className="text-center bg-blue-100" type="text" 
+                    className="text-center " type="text" 
                     name="replyText" onChange={handleChange} 
                     value={reply.replyText}>
                     </input>

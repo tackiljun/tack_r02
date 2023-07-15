@@ -37,11 +37,10 @@ const ReplyInput = ({bno, refreshLast}) => {
     }
  
     return ( 
-        <div className="m-auto w-1/5 bg-blue-300 border-2">
+        <div className="m-auto w-1/5 bg-blue-200 border-2">
             <div className="text-center">REPLY INPUT</div>
             <div className="m-2 text-center">
                 <input
-                 className="bg-blue-100"
                  type="text" name="replyText" 
                  value={reply.replyText} 
                  onChange={handleChange}>
@@ -49,7 +48,6 @@ const ReplyInput = ({bno, refreshLast}) => {
             </div>
             <div className="m-2 text-center">
                 <input
-                 className="bg-blue-100"
                  type="text" 
                  name="replyer" 
                  value={reply.replyer} 
