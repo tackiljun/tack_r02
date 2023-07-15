@@ -6,7 +6,7 @@ const BasicLayout = ({children}) => {
             <div>
                 <SampleNav></SampleNav>
             </div>
-            <div>
+            <div className="bg-blue-200">
                 {children}
             </div>
         </div>

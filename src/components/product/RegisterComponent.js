@@ -52,26 +52,26 @@ const RegisterComponent = ({moveList}) => {
 
     return ( 
 
-        <div className="m-2 p-2 bg-blue-200">
+        <div className="m-2 p-2 ">
             
-            <div className="m-2 p-2 border-2">
-                <input type='text' name='pname' value={product.pname} onChange={handleChange}></input>
+            <div className="m-auto p-2 w-1/3 bg-blue-200 border-2">
+                NAME <input type='text' name='pname' value={product.pname} onChange={handleChange}></input>
             </div>
 
-            <div className="m-2 p-2 border-2">
-                <input type='text' name='pdesc' value={product.pdesc} onChange={handleChange}></input>
+            <div className="m-auto p-2 w-1/3 bg-blue-200 border-2">
+                DRSC <input type='text' name='pdesc' value={product.pdesc} onChange={handleChange}></input>
             </div>
 
-            <div className="m-2 p-2 border-2">
-                <input type='number' name='price' value={product.price} onChange={handleChange}></input>
+            <div className="m-auto p-2 w-1/3 bg-blue-200 border-2">
+                PRICE <input type='number' name='price' value={product.price} onChange={handleChange}></input>
             </div>
 
-            <div className="m-2 p-2 border-2"> 
+            <div className="m-auto p-2 w-1/3 bg-blue-200 border-2"> 
                 <input className="m-auto items-center" type='file' ref={fileRef} multiple name='images' onChange={handleChange}></input>
             </div>
 
-            <div className="m-2 p-2 border-2">
-                <button className="m-2 p-2 bg-blue-300 border-2" onClick={handleClickSave}>SAVE</button>
+            <div className="m-auto p-2 w-1/3 bg-blue-200 border-2">
+                <button className="m-2 p-2 bg-blue-300 border-2 " onClick={handleClickSave}>SAVE</button>
                 <button className="m-2 p-2 bg-blue-300 border-2" onClick={handleClickClear}>CLEAR FILES</button>
             </div>
         </div>

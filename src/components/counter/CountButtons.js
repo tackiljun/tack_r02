@@ -15,8 +15,8 @@ const CountButtons = () => {
 
     return ( 
         <div>
-            <button onClick={handleClickInc}>INC</button>
-            <button onClick={handleClickDec}>DEC</button>
+            <button className="m-2 p-2 bg-blue-300 border-2" onClick={handleClickInc}>INC</button>
+            <button className="m-2 p-2 bg-blue-300 border-2" onClick={handleClickDec}>DEC</button>
         </div>
      );
 }

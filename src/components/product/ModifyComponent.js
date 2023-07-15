@@ -79,35 +79,35 @@ const handleClickDelImg = (fname) => {
 
 
 return ( 
-    <div>
-        <div className="m-2 p-2 border-2">
+    <div className="">
+        <div className="m-2 p-2 bg-blue-200 border-2">
             {product.pno}
         </div>
-        <div className="m-2 p-2 border-2">
+        <div className="m-2 p-2 bg-blue-200 border-2">
             <input 
             type="text" 
             name="pname" 
             value={product.pname} 
             onChange={handleChange}></input>
         </div>
-        <div className="m-2 p-2 border-2">
+        <div className="m-2 p-2 bg-blue-200 border-2">
             <input 
             type="text" 
             name="pdesc" 
             value={product.pdesc} 
             onChange={handleChange}></input>
         </div>
-        <div className="m-2 p-2 border-2">
+        <div className="m-2 p-2 bg-blue-200 border-2">
             <input 
             type="number" 
             name="price" 
             value={product.price} 
             onChange={handleChange}></input>
         </div>
-        <div className="m-2 p-2 border-2"> 
+        <div className="m-2 p-2 bg-blue-200 border-2"> 
             <input type='file' ref={fileRef} multiple name='images' ></input>
         </div>
-        <div className="m-2 p-2 border-2">
+        <div className="m-2 p-2 bg-blue-200 border-2">
             <ul className="list-none flex">
                 {product.images.map( (fname, idx) => 
                 <li key={idx} className="m-2">
@@ -123,13 +123,13 @@ return (
         </div>
         <div>
             <button 
-            className="bg-red-300 border-2 m-2 p-2 font-bold"
+            className="bg-blue-400 border-2 m-2 p-2 font-bold"
             onClick={handleClickModify}>
                 MODIFY
             </button>
 
             <button 
-            className="bg-red-300 border-2 m-2 p-2 font-bold"
+            className="bg-blue-300 border-2 m-2 p-2 font-bold"
             onClick={moveList}>
                 LIST
             </button>    

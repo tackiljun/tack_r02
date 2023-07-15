@@ -63,13 +63,13 @@ const ReplyRead = ({rno, cancleRead, refreshPage}) => {
                 <div>{reply.replyer}</div>
             </div>
             <div className="text-center">
-                <button className="m-2 p-2 bg-blue-100 border-2" onClick={handleClickModify}>
+                <button className="m-2 p-2 bg-blue-300 border-2" onClick={handleClickModify}>
                     MODIFY
                 </button>
-                <button className="m-2 p-2 bg-blue-100 border-2" onClick={handleClickDelete}>
+                <button className="m-2 p-2 bg-blue-300 border-2" onClick={handleClickDelete}>
                     DELETE
                 </button>
-                <button className="m-2 p-2 bg-blue-100 border-2" onClick={cancleRead}>
+                <button className="m-2 p-2 bg-blue-300 border-2" onClick={cancleRead}>
                     CANCLE
                 </button>
             </div>

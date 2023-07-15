@@ -14,8 +14,8 @@ const TodoInput = () => {
     return ( 
         <div>
             TODO INPUT
-            <input className="bg-blue-200" type="text" value={text} onChange={e => setText(e.target.value)}></input>
-            <button onClick={handleClickSave}>SAVE</button>
+            <input type="text" value={text} onChange={e => setText(e.target.value)}></input>
+            <button className="m-2 p-2 bg-blue-300 border-2" onClick={handleClickSave}>SAVE</button>
         </div>
      );
 }

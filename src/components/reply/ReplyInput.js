@@ -52,7 +52,7 @@ const ReplyInput = ({bno, refreshLast}) => {
                  type="text" name="replyer" value={reply.replyer} onChange={handleChange}></input>
             </div>
             <div className="m-2 text-center">
-                <button className="bg-blue-100 border-2" onClick={handleClickRegister}>REGISTER</button>
+                <button className="bg-blue-300 border-2" onClick={handleClickRegister}>REGISTER</button>
             </div>
         </div>
      );

@@ -46,7 +46,7 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
             }}>
             </input>
 
-            <button className="m-2 p-2 bg-blue-100 border-2"
+            <button className="m-2 p-2 bg-blue-300 border-2"
             onClick={ e => moveSearch(searchObj.type, searchObj.keyword)}>
                 SEARCH
             </button>

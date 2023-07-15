@@ -26,16 +26,16 @@ const ReadComponent = ({pno, moveModify, moveList}) => {
 
   return (
     <div className="m-2 p-2">
-      <div className="m-2 p-2 border-2">
+      <div className="m-auto p-2 w-1/5 bg-blue-200 border-2">
         {product.pname}
       </div>
-      <div className="m-2 p-2 border-2">
+      <div className="m-auto p-2 w-1/5 bg-blue-200 border-2">
         {product.pdesc}
       </div>
-      <div className="m-2 p-2 border-2">
+      <div className="m-auto p-2 w-1/5 bg-blue-200 border-2">
         {product.price}
       </div>
-      <div className="m-2 p-2 border-2">
+      <div className="m-2 p-2 bg-blue-200 border-2">
         <ul className="list-none">
           {product.images.map( (fname, idx) => 
             <li key={idx}>

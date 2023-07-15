@@ -35,12 +35,12 @@ const ListComponent = ({queryObj, movePage, moveRead}) => {
 
     return ( 
 
-        <div className="bg-sb-01">
+        <div className="bg-sb-01 text-2xl">
             <div>
                 <ul className="flex flex-wrap container justify-center">
                     {listData.dtoList.map(dto => 
                         <li
-                        className="w-2/5 h-[300px] bg-blue-200 m-2 p-2 rounded-md shadow-lg"
+                        className="w-2/5 h-[320px] bg-blue-200 m-2 p-2 rounded-md shadow-lg"
                         key={dto.pno}
                         onClick={() => moveRead(dto.pno)} 
                         >
