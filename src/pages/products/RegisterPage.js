@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import RegisterComponent from "../../components/product/RegisterComponent";
 
+
 const RegisterPage = () => {
 
     const navigate = useNavigate()
@@ -12,9 +13,12 @@ const RegisterPage = () => {
 
 
     return ( 
+        
         <div className="text 3xl">
             PRODUCT REGISTER PAGE
-            <RegisterComponent moveList={moveList}></RegisterComponent>
+            <RegisterComponent 
+            moveList={moveList}>
+            </RegisterComponent>
         </div>
      );
 }

@@ -21,6 +21,7 @@ import useQueryObj from "../../hooks/useQueryObj";
 //     return result
 // }
 
+
 const ListPage = () => {
 
     const {queryObj, setSearch, moveRead, moveList} = useQueryObj()
@@ -45,7 +46,9 @@ const ListPage = () => {
 
     return ( 
         <div>
-          <div className="m-auto text-center">BOARD LIST PAGE</div>
+          <div className="m-auto text-center">
+            BOARD LIST PAGE
+          </div>
           
           <ListSearchComponent moveSearch={moveSearch} queryObj={queryObj}>
           </ListSearchComponent>

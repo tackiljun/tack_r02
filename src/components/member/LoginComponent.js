@@ -8,13 +8,14 @@ const initState = {
     pw:'1111'
 }
 
+
 const LoginComponent = () => {
 
     const [loginInfo, setLoginInfo] = useState({...initState})
-
     const dispatch = useDispatch()
 
     return ( 
+
         <div>
             <div>
                 <label>EMAIL</label>
@@ -35,7 +36,9 @@ const LoginComponent = () => {
                 </input>
             </div>
             <div>
-                <button onClick={() => dispatch(requestLogin(loginInfo))}>LOGIN</button>
+                <button onClick={() => dispatch(requestLogin(loginInfo))}>
+                    LOGIN
+                </button>
             </div>
         </div>
      );

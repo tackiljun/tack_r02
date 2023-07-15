@@ -14,6 +14,7 @@ const ListPage = () => {
       }
 
     return ( 
+      
         <div className="text-3xl">
             PRODUCTS LIST PAGE
 

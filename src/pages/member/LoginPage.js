@@ -3,7 +3,9 @@ import BasicLayout from "../../layouts/BasicLayout";
 
 
 const LoginPage = () => {
+    
     return ( 
+
         <BasicLayout>
             <div>LOGIN PAGE</div>
             <LoginComponent></LoginComponent>

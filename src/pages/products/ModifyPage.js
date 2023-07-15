@@ -3,6 +3,7 @@ import useQueryObj from "../../hooks/useQueryObj";
 import ModifyComponent from "../../components/product/ModifyComponent";
 import useCustomLogin from "../../hooks/useCustomLogin";
 
+
 const ModifyPage = () => {
 
     const {loginInfo} = useCustomLogin( (nav) => {
@@ -15,10 +16,16 @@ const ModifyPage = () => {
     const {pno} = useParams()
 
     return ( 
-        <div>
-            <div>PRODUCT MODIFY PAGE {pno}</div>
 
-            <ModifyComponent pno={pno} moveList={moveList} moveRead={moveRead}>
+        <div>
+            <div>
+                PRODUCT MODIFY PAGE {pno}
+            </div>
+
+            <ModifyComponent 
+            pno={pno} 
+            moveList={moveList} 
+            moveRead={moveRead}>
             </ModifyComponent>
         </div>
      );

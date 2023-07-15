@@ -17,6 +17,7 @@ const initState = {
     requestDTO:null
 }
 
+
 const ListComponent = ({queryObj, movePage, moveRead}) => {
 
     const [listData, setListData] = useState(initState)

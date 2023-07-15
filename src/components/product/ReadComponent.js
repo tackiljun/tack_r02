@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProduct } from "../../api/productAPI";
 
+
 const initState = {
   pno: 0,
   pname: "",
@@ -8,6 +9,7 @@ const initState = {
   price: 0,
   images: []
 }
+
 
 const ReadComponent = ({pno, moveModify, moveList}) => {
 
@@ -25,6 +27,7 @@ const ReadComponent = ({pno, moveModify, moveList}) => {
   }, [pno])
 
   return (
+    
     <div className="m-2 p-2">
       <div className="m-auto p-2 w-1/5 bg-blue-200 border-2">
         {product.pname}
@@ -44,6 +47,7 @@ const ReadComponent = ({pno, moveModify, moveList}) => {
           )}
         </ul>
       </div>
+
       <div>
       <button 
         className="bg-red-300 border-2 m-2 p-2 font-bold"

@@ -11,6 +11,7 @@ const AboutPage = () => {
     const {loginInfo} = useCustomLogin()
 
     return ( 
+
         <BasicLayout>
             <h2>ABOUT PAGE</h2>
 
@@ -18,7 +19,6 @@ const AboutPage = () => {
 
             <CountDisplay></CountDisplay>
             <CountButtons></CountButtons>
-
         </BasicLayout>
      );
 }

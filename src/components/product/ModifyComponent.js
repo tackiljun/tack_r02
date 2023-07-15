@@ -31,54 +31,51 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
         })
     }
 
-  const handleChange = (e) => {
-    product[e.target.name] = e.target.value
+    const handleChange = (e) => {
 
-    setProduct({...product})
-}
+        product[e.target.name] = e.target.value
+        setProduct({...product})
+    }
 
+    const handleClickModify = () => {
 
-const handleClickModify = () => {
+        const formData = new FormData();
 
-    const formData = new FormData();
+        formData.append("pno", product.pno)
+        formData.append("pname", product.pname)
+        formData.append("pdesc", product.pdesc)
+        formData.append("price", product.price)
 
-    formData.append("pno", product.pno)
-    formData.append("pname", product.pname)
-    formData.append("pdesc", product.pdesc)
-    formData.append("price", product.price)
-
-    if(product.images) { 
-        for(let pi of product.images) {
-            formData.append("images", pi)
+        if(product.images) { 
+            for(let pi of product.images) {
+                formData.append("images", pi)
+            }
         }
+
+        //console.dir(fileRef.current)
+
+        const arr = fileRef.current.files
+
+        for(let file of arr){
+            formData.append("files", file) // files : 컨트롤러에서 받을 때 이름
+        }
+
+        putProduct(formData).then(data => {
+            console.log(data)
+            alert("수정되었습니다.....")
+            moveRead(pno)
+        })
     }
 
-    //console.dir(fileRef.current)
+    const handleClickDelImg = (fname) => {
 
-    const arr = fileRef.current.files
+        const newArr = product.images.filter(ele => ele !== fname)
 
-    for(let file of arr){
-        formData.append("files", file) // files : 컨트롤러에서 받을 때 이름
+        product.images = newArr
+        setProduct({...product})
     }
 
-    putProduct(formData).then(data => {
-        console.log(data)
-        alert("수정되었습니다.....")
-        moveRead(pno)
-    })
-}
-
-const handleClickDelImg = (fname) => {
-
-    const newArr = product.images.filter(ele => ele !== fname)
-
-    product.images = newArr
-    setProduct({...product})
-}
-
-
-
-return ( 
+    return ( 
     <div className="">
         <div className="m-2 p-2 bg-blue-200 border-2">
             {product.pno}
@@ -88,24 +85,31 @@ return (
             type="text" 
             name="pname" 
             value={product.pname} 
-            onChange={handleChange}></input>
+            onChange={handleChange}>
+            </input>
         </div>
         <div className="m-2 p-2 bg-blue-200 border-2">
             <input 
             type="text" 
             name="pdesc" 
             value={product.pdesc} 
-            onChange={handleChange}></input>
+            onChange={handleChange}>
+            </input>
         </div>
         <div className="m-2 p-2 bg-blue-200 border-2">
             <input 
             type="number" 
             name="price" 
             value={product.price} 
-            onChange={handleChange}></input>
+            onChange={handleChange}>
+            </input>
         </div>
         <div className="m-2 p-2 bg-blue-200 border-2"> 
-            <input type='file' ref={fileRef} multiple name='images' ></input>
+            <input 
+            type='file' 
+            ref={fileRef} 
+            multiple name='images'>
+            </input>
         </div>
         <div className="m-2 p-2 bg-blue-200 border-2">
             <ul className="list-none flex">

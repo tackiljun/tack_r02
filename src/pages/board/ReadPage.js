@@ -3,6 +3,7 @@ import useQueryObj from "../../hooks/useQueryObj";
 import ReadComponent from "../../components/board/read/ReadComponent";
 import ReplyWrapper from "../../components/reply/ReplyWrapper";
 
+
 const ReadPage = () => {
 
     const {queryObj, moveList} = useQueryObj()
@@ -15,17 +16,20 @@ const ReadPage = () => {
     
 
     return ( 
+
         <div>
             <div className="m-auto text-center">
                 BOARD READ PAGE
                 <div>
-                    <ReadComponent  bno={bno}></ReadComponent>
+                    <ReadComponent bno={bno}></ReadComponent>
                 </div>
             </div>
                 
             <ReplyWrapper bno={bno}></ReplyWrapper>
 
-            <button onClick={moveList}>LIST</button>
+            <button onClick={moveList}>
+                LIST
+            </button>
         </div>
      );
 }

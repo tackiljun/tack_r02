@@ -3,6 +3,7 @@ import useQueryObj from "../../hooks/useQueryObj"
 import ReadComponent from "../../components/product/ReadComponent"
 import useCustomLogin from "../../hooks/useCustomLogin"
 
+
 const ReadPage = () => {
 
     const {queryObj, setSearch, moveRead, moveList, moveModify} = useQueryObj()
@@ -20,8 +21,10 @@ const ReadPage = () => {
     return ( 
 
         <div>
-            <ReadComponent pno={pno} moveModify={moveModify} moveList={moveList}>
-
+            <ReadComponent 
+            pno={pno} 
+            moveModify={moveModify} 
+            moveList={moveList}>
             </ReadComponent>
         </div>
      );

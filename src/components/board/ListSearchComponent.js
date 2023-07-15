@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 const ListSearchComponent = ({queryObj, moveSearch}) => {
 
     // setTimeout(() => {
@@ -14,16 +15,15 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
 
         searchObj.type = queryObj.type || ''
         searchObj.keyword = queryObj.keyword || ''
-
         setSearchObj({...searchObj})
 
     }, [queryObj])
     
-
     return ( 
-        <div className="m-4 p-4 bg-blue-300 border-2">
 
-            <select className="m-2 p-2 bg-blue-100 border-2" 
+        <div className="m-4 p-4 bg-blue-300 border-2">
+            <select 
+            className="m-2 p-2 bg-blue-100 border-2" 
             value={searchObj.type}
             onChange={ e => {
                 searchObj.type = e.target.value
@@ -37,7 +37,8 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
                 <option value={'tcw'}>제목+내용+작성자</option>
             </select>
 
-            <input type="text" 
+            <input 
+            type="text" 
             className="m-2 p-2 bg-blue-100 border-2"
             value={searchObj.keyword}
             onChange={ e => {
@@ -50,7 +51,6 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
             onClick={ e => moveSearch(searchObj.type, searchObj.keyword)}>
                 SEARCH
             </button>
-
         </div>
      );
 }

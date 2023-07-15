@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
 // createSlice - 금고역할.
 const countSlice = createSlice({
     name: "CountSlice",
@@ -30,6 +31,7 @@ const countSlice = createSlice({
         }
     }
 })
+
 
 // actions내부?????
 export const {inc, dec} = countSlice.actions

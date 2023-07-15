@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getOne } from "../../../api/boardAPI";
 
+
 const initState = {
     bno:0,
     title:'',
@@ -9,6 +10,7 @@ const initState = {
     regDate:'',
     modDate:''
 }
+
 
 const ReadComponent = ({bno}) => {
 
