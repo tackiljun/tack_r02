@@ -1,13 +1,26 @@
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import CartNav from "./CartNav";
+import { requestLogout } from "../../reducers/loginSlice";
 
 
 const LoginNav = () => {
 
     const {email, nickname} = useSelector(state => state.login)
 
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
     console.log("LoginNav.....", email)
+
+    const handleClickLogout = () => {
+
+        dispatch(requestLogout())
+        navigate("/")
+
+        console.log("LogoutNav.....")
+
+    }
 
     if(email !== '') {
         return (
@@ -16,6 +29,10 @@ const LoginNav = () => {
                     {email} - {nickname}
                 </div>
                 <CartNav></CartNav>
+                <div>
+                <button className="border-2" onClick={handleClickLogout}>LOGOUT</button>
+                </div>
+                
             </div>
         )
     }

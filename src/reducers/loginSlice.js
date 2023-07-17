@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getCookie, setCookie } from "../util/cookieUtil";
+import { getCookie, removeCookie, setCookie } from "../util/cookieUtil";
 import { postLogin } from "../api/memberAPI";
 
 
@@ -47,6 +47,16 @@ const loginSlice = createSlice({
             setCookie("login", JSON.stringify(loginObj), 1)
 
             return loginObj
+        },
+        requestLogout: (state) => {
+
+            //const logoutObj = {email:payload.email, signed:true}
+
+            console.log("requestLogout")
+
+            removeCookie("login")
+
+            return initState
         }
     },
     // extraReducers 설정방법 2가지
@@ -82,5 +92,7 @@ const loginSlice = createSlice({
 
 
 //export const {requestLogin} = loginSlice.actions
+
+export const {requestLogout} = loginSlice.actions
 
 export default loginSlice.reducer

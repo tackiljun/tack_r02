@@ -22,7 +22,7 @@ const CartNav = () => {
     }, [email])
 
     return ( 
-        <div className="text-4xl text-red-500">
+        <div className="text-3xl text-red-500">
             CART {items.length}
         </div>
      );

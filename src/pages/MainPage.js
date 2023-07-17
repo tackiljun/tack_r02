@@ -12,7 +12,7 @@ const MainPage = () => {
         <BasicLayout>
             <h2 className="m-auto text-center">MAIN PAGE</h2>
 
-            <TodoList></TodoList>
+            {/* <TodoList></TodoList> */}
 
             <div>
                 <img 

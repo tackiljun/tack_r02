@@ -30,7 +30,9 @@ const LoginComponent = () => {
                 LOADING: {loginState.loading ? '로그인중':''}
             </div>
             
-            {errorMsg ? <div className="text-3xl bg-red-500">이메일과 패스워드를 확인해주세요!!!!!</div> : <></>}
+            {errorMsg ? 
+            <div className="text-3xl bg-red-500">이메일과 패스워드를 확인해주세요!!!!!
+            </div> : <></>}
             
             <div>
                 <label>EMAIL</label>
