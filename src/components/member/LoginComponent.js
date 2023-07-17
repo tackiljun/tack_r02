@@ -5,8 +5,8 @@ import { postLoginThunk, requestLogin } from "../../reducers/loginSlice";
 
 const initState = {
     email:'user@aaa.com',
-    //pw:'1111'
-    pw:'1234'
+    pw:'1111'
+    //pw:'1234'
 }
 
 

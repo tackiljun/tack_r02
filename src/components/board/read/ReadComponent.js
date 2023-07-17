@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getOne } from "../../../api/boardAPI";
+import { useSelector } from "react-redux";
 
 
 const initState = {
