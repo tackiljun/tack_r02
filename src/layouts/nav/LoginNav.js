@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 
 const LoginNav = () => {
 
-    const {email, signed} = useSelector(state => state.login)
+    const {email, nickname} = useSelector(state => state.login)
 
-    console.log("LoginNav.....", email, signed)
+    console.log("LoginNav.....", email)
 
-    if(signed) {
+    if(email !== '') {
         return (
             <div>
                 <div>
-                    {email}
+                    {email} - {nickname}
                 </div>
             </div>
         )
