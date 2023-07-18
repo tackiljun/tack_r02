@@ -42,9 +42,10 @@ const loginSlice = createSlice({
             const payload = action.payload
             console.log("requestLogin", payload)
 
-            const loginObj = {email:payload.email, signed:true}
+            //const loginObj = {email:payload.email, signed:true}
 
-            setCookie("login", JSON.stringify(loginObj), 1)
+            setCookie("login", JSON.stringify(payload), 1)
+            //setCookie("login", JSON.stringify(loginObj), 1)
 
             //return loginObj
             return payload
@@ -70,6 +71,7 @@ const loginSlice = createSlice({
 
             if(errorMsg) {
                 state.errorMsg = errorMsg
+                state.loading = false
                 return
             }
             state.loading = false

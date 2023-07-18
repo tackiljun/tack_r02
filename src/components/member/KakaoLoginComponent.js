@@ -12,8 +12,10 @@ const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_KEY}&
 
 const KakaoLoginComponent = () => {
     return ( 
-        <div className="text-2xl text-yellow-500">
-            <Link to={kakaoURL}>KAKAO LOGIN</Link>
+        <div className="m-auto" style={{width:"95px"}}>
+            <Link to={kakaoURL}>
+                <img className="m-auto" src={require("../../images/kakao_login_medium.png")}></img>
+            </Link>
         </div>
     );
 }
