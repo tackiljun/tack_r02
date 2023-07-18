@@ -16,10 +16,10 @@ const LoginNav = () => {
     const handleClickLogout = () => {
 
         dispatch(requestLogout())
+        //console.log(email)
         navigate("/")
 
         console.log("LogoutNav.....")
-
     }
 
     if(email !== '') {

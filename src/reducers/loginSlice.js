@@ -38,15 +38,16 @@ const loginSlice = createSlice({
     // 함수의 리턴값으로 받을 생각.
     initialState: loadCookie(),  
     reducers: {
-        requestLogin: (state, param) => {
-            const payload = param.payload
+        requestLogin: (state, action) => {
+            const payload = action.payload
             console.log("requestLogin", payload)
 
             const loginObj = {email:payload.email, signed:true}
 
             setCookie("login", JSON.stringify(loginObj), 1)
 
-            return loginObj
+            //return loginObj
+            return payload
         },
         requestLogout: (state) => {
 
@@ -91,8 +92,9 @@ const loginSlice = createSlice({
 })
 
 
-//export const {requestLogin} = loginSlice.actions
+export const {requestLogin} = loginSlice.actions
 
 export const {requestLogout} = loginSlice.actions
+
 
 export default loginSlice.reducer

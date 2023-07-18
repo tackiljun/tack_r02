@@ -7,6 +7,7 @@ import IndexPage from "../pages/board/IndexPage";
 import { Suspense, lazy } from "react";
 import LoadingPage from "../pages/LoadingPage";
 import MyPage from "../pages/MyPage";
+import KakaoRedircetPage from "../pages/member/KakaoRedirectPage";
 
 
 const Loading = <LoadingPage></LoadingPage>
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
     {
       path: "member/login",
       element: <Suspense fallback={Loading}><Member_Login/></Suspense>,
+    }
+    ,
+    {
+      path: "member/kakao",
+      element: <KakaoRedircetPage></KakaoRedircetPage>
     }
     ,
     {
