@@ -54,7 +54,9 @@ const LoginComponent = () => {
                 </input>
             </div>
             <div>
-                <button className="m-2 p-3 border-2 bg-white" onClick={() => dispatch(postLoginThunk(loginInfo))}>
+                <button 
+                className="m-2 p-3 border-2 bg-blue-300" 
+                onClick={() => dispatch(postLoginThunk(loginInfo))}>
                     LOGIN
                 </button>
             </div>

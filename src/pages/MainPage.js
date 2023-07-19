@@ -17,7 +17,7 @@ const MainPage = () => {
             <div>
                 <img 
                 className="mx-auto" 
-                src={require("../images/mainimg1.jpg")} />
+                src={require("../images/GlassMainimg.jpg")} />
             </div>
         </BasicLayout>
      );

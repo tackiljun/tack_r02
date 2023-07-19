@@ -10,6 +10,10 @@ const SampleNav = () => {
     return ( 
 
         <div className="flex m-4 p-4 bg-blue-200 font-extrabold justify-center">
+            <div className="w-24 h-24">
+            <img src={require("../../images/GlassLogo.webp")}></img>
+            </div>
+            
             <div className="m-auto text-3xl border-2">
                 <Link to="/" >MAIN</Link>
                 <span className="m-1 p-1 bg-white font-extrabold  ">
