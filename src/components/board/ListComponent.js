@@ -4,7 +4,6 @@ import { getList } from "../../api/boardAPI";
 import ListPageComponent from "../common/ListPageComponent";
 
 
-
 const initState = {
     dtoList:[],
     end:0,
@@ -35,9 +34,8 @@ const ListComponent = ({queryObj, movePage, moveRead}) => {
     }, [queryObj])
 
     
-
     return ( 
-
+        
         <div>
             <div className="m-auto text-center">
                 LIST COMPONENT
@@ -84,7 +82,6 @@ const ListComponent = ({queryObj, movePage, moveRead}) => {
 
             <ListPageComponent movePage={movePage} {...listData}>
             </ListPageComponent>
-            
         </div>
      );
 }

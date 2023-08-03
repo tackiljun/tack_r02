@@ -91,12 +91,11 @@ const loginSlice = createSlice({
             console.log("rejected")
         })
     }
-
-    
 })
 
 
 export const {requestLogin} = loginSlice.actions
+
 
 export const {requestLogout} = loginSlice.actions
 

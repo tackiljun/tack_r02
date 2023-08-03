@@ -7,10 +7,8 @@ const RegisterPage = () => {
     const navigate = useNavigate()
 
     const moveList = () => {
-
         navigate("../list")
     }
-
 
     return ( 
         

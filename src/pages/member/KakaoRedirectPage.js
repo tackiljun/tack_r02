@@ -46,6 +46,7 @@ const KakaoRedirectPage = () => {
     },[authCode])
 
     return ( 
+        
         <div>
             {authCode}
         </div>

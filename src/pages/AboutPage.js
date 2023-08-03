@@ -16,7 +16,6 @@ const AboutPage = () => {
             <h2>ABOUT PAGE</h2>
 
             <TodoInput></TodoInput>
-
             <CountDisplay></CountDisplay>
             <CountButtons></CountButtons>
         </BasicLayout>

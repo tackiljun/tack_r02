@@ -18,10 +18,9 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
 
     useEffect(() => {
 
-    getProduct(pno).then(data => {
-      setProduct(data)
-    })
-
+        getProduct(pno).then(data => {
+            setProduct(data)
+        })
     }, [pno])
 
     const handleClickDelete = () => {
@@ -46,7 +45,7 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
         formData.append("pdesc", product.pdesc)
         formData.append("price", product.price)
 
-        if(product.images) { 
+        if(product.images) {
             for(let pi of product.images) {
                 formData.append("images", pi)
             }
@@ -56,7 +55,7 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
 
         const arr = fileRef.current.files
 
-        for(let file of arr){
+        for(let file of arr) {
             formData.append("files", file) // files : 컨트롤러에서 받을 때 이름
         }
 
@@ -80,6 +79,7 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
         <div className="m-2 p-2 bg-blue-200 border-2">
             {product.pno}
         </div>
+
         <div className="m-2 p-2 bg-blue-200 border-2">
             <input 
             type="text" 
@@ -88,6 +88,7 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
             onChange={handleChange}>
             </input>
         </div>
+
         <div className="m-2 p-2 bg-blue-200 border-2">
             <input 
             type="text" 
@@ -96,6 +97,7 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
             onChange={handleChange}>
             </input>
         </div>
+
         <div className="m-2 p-2 bg-blue-200 border-2">
             <input 
             type="number" 
@@ -104,6 +106,7 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
             onChange={handleChange}>
             </input>
         </div>
+
         <div className="m-2 p-2 bg-blue-200 border-2"> 
             <input 
             type='file' 
@@ -111,6 +114,7 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
             multiple name='images'>
             </input>
         </div>
+
         <div className="m-2 p-2 bg-blue-200 border-2">
             <ul className="list-none flex">
                 {product.images.map( (fname, idx) => 
@@ -125,6 +129,7 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
                 )}
             </ul>
         </div>
+        
         <div>
             <button 
             className="bg-blue-400 border-2 m-2 p-2 font-bold"

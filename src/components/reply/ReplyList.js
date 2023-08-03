@@ -29,8 +29,8 @@ const ReplyList = ({bno, page, last, refresh, movePage, changeCurrent}) => {
         // 댓글데이터를 가져온다.
         getRepliesOfBoard(bno, page, last).then(data => {
 
-            console.log("---------------------------------")
-            console.log("------------------------")
+            console.log("-------------------------")
+            console.log("--------------------")
             // console.log(bno)
             // console.log(page)
             // console.log(last)
@@ -65,6 +65,7 @@ const ReplyList = ({bno, page, last, refresh, movePage, changeCurrent}) => {
                             style={{ width: '15%' }}>REGDATE</th> */}
                         </tr>
                     </thead>
+                    
                     <tbody>
                         {listData.dtoList.map(({rno,replyText,replyFile,replyer}) =>
                         <tr

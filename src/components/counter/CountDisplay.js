@@ -9,7 +9,6 @@ const CountDisplay = () => {
     console.log(obj)
 
     return ( 
-        
         <div className="text-4xl">
             COUNT: {obj.num}
         </div>

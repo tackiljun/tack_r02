@@ -30,9 +30,8 @@ const LoginNav = () => {
                 </div>
                 <CartNav></CartNav>
                 <div>
-                <button className="border-2" onClick={handleClickLogout}>LOGOUT</button>
+                    <button className="border-2" onClick={handleClickLogout}>LOGOUT</button>
                 </div>
-                
             </div>
         )
     }

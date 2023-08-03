@@ -3,7 +3,6 @@ import axios from "axios"
 
 const REST_KEY= '071d01b9d7104c6c9277e10ed51b5180'
 const REDIRECT_URI= 'http://localhost:3000/member/kakao'
-
 const AUTH_TOKEN_URL="https://kauth.kakao.com/oauth/token"
 
 

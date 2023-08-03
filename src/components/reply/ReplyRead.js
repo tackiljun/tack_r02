@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { deleteReply, getReply, putReply } from "../../api/repliesAPI";
 
+
 const initState = {
     rno:0,
     bno:0,
@@ -8,6 +9,7 @@ const initState = {
     replyFile:'',
     replyer:''
 }
+
 
 const ReplyRead = ({rno, cancleRead, refreshPage}) => {
 

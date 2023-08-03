@@ -23,7 +23,6 @@ const useCustomLogin = (fn) => {
             navigate("/member/login")
         }
     }, [loginInfo.email])
-    
     return {loginInfo}
 }
  

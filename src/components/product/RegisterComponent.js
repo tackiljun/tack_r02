@@ -50,9 +50,7 @@ const RegisterComponent = ({moveList}) => {
     }
 
     return ( 
-
         <div className="m-2 p-2 ">
-            
             <div className="m-auto p-2 w-1/3 bg-blue-200 border-2">
                 NAME <input 
                      type='text' 
@@ -63,11 +61,11 @@ const RegisterComponent = ({moveList}) => {
             </div>
             <div className="m-auto p-2 w-1/3 bg-blue-200 border-2">
                 DRSC <input 
-                      type='text' 
-                      name='pdesc' 
-                      value={product.pdesc} 
-                      onChange={handleChange}>
-                      </input>
+                     type='text' 
+                     name='pdesc' 
+                     value={product.pdesc} 
+                     onChange={handleChange}>
+                     </input>
             </div>
             <div className="m-auto p-2 w-1/3 bg-blue-200 border-2">
                 PRICE <input 

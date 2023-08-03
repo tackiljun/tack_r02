@@ -3,6 +3,7 @@ import ReplyList from "./ReplyList";
 import ReplyInput from "./ReplyInput";
 import ReplyRead from "./ReplyRead";
 
+
 // 상태값 초기화.
 const initState = {
     bno: 0,
@@ -11,6 +12,7 @@ const initState = {
     refresh:false,
     current:0
 }
+
 
 // bno 1개가 propertities로 내려온다.
 const ReplyWrapper = ({bno}) => {
@@ -44,7 +46,7 @@ const ReplyWrapper = ({bno}) => {
         setData({...data})
     }
 
-    const refreshLast = () =>{
+    const refreshLast = () => {
         data.last = true
         data.refresh = !data.refresh
         setData({...data})
@@ -61,7 +63,6 @@ const ReplyWrapper = ({bno}) => {
         if(hide) {
             data.refresh = !data.refresh
         }
-
         setData({...data})
     }
    

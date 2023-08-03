@@ -1,12 +1,14 @@
 import axios from "axios";
 import {getCookie, setCookie} from "../util/cookieUtil"
 
+
 // axios interceptor 총 4개 정의 
 const jwtAxios = axios.create()
 
+
 const beforeReq = (config) => {
 
-    console.log("beforeRequest.................")
+    console.log("beforeRequest..........")
 
     const {accessToken}  = getCookie("login")
 
@@ -18,16 +20,19 @@ const beforeReq = (config) => {
 
     return config
 }
+
+
 const requestFail = (err) => {
 
-    console.log("request fail..............")
+    console.log("request fail..........")
 
     return Promise.reject(err)
 }
 
+
 const beforeRes = async(res) => {
 
-    console.log("2xx Response.............")
+    console.log("2xx Response..........")
 
     if(res.data.error === 'Expired'){
 
@@ -40,10 +45,9 @@ const beforeRes = async(res) => {
 
         return await axios(originalRequest)
     }
-
     return res
-
 }
+
 
 const refreshJWT = async () => {
 
@@ -62,14 +66,14 @@ const refreshJWT = async () => {
     const newAccess = res.data.accessToken
     const newRefresh = res.data.refreshToken
 
-    console.log("--------------------------------")
+    console.log("------------------------------")
     console.log("new access :" + newAccess )
     console.log("new refresh :" + newRefresh)
 
 
     cookieValue.accessToken = newAccess
     cookieValue.refreshToken = newRefresh
-    console.log("--------------------------------")
+    console.log("------------------------------")
     console.log(cookieValue)
 
     setCookie("login", JSON.stringify(cookieValue), 1)
@@ -79,15 +83,15 @@ const refreshJWT = async () => {
 }
 
 
-
 const responseFail  = (err) => {
-    console.log("response fail...........")
-
+    console.log("response fail..........")
 
     return Promise.reject(err)
 }
 
+
 jwtAxios.interceptors.request.use(beforeReq, requestFail)
 jwtAxios.interceptors.response.use(beforeRes, responseFail)
+
 
 export default jwtAxios

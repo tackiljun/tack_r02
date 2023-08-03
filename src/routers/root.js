@@ -23,6 +23,7 @@ const Products_Modify = lazy(() => import("../pages/products/ModifyPage"))
 
 const Member_Login = lazy(() => import("../pages/member/LoginPage"))
 
+
 const router = createBrowserRouter([
     {
         path:"",
@@ -35,13 +36,13 @@ const router = createBrowserRouter([
     }
     ,
     {
-      path: "member/login",
-      element: <Suspense fallback={Loading}><Member_Login/></Suspense>,
+        path: "member/login",
+        element: <Suspense fallback={Loading}><Member_Login/></Suspense>,
     }
     ,
     {
-      path: "member/kakao",
-      element: <KakaoRedircetPage></KakaoRedircetPage>
+        path: "member/kakao",
+        element: <KakaoRedircetPage></KakaoRedircetPage>
     }
     ,
     {
@@ -69,27 +70,28 @@ const router = createBrowserRouter([
         path: "products",
         element: <Suspense fallback={Loading}><Products_Index/></Suspense>,
         children: [
-          {
-            path: "list",
-            element: <Suspense fallback={Loading}><Products_List/></Suspense>
-          }
-          ,
-          {
-            path: "register",
-            element: <Suspense fallback={Loading}><Products_Register/></Suspense>
-          }
-          ,
-          {
-            path: "read/:pno",
-            element: <Suspense fallback={Loading}><Products_Read/></Suspense>
-          }
-          ,
-          {
-            path: "modify/:pno",
-            element: <Suspense fallback={Loading}><Products_Modify/></Suspense>
-          }
+            {
+                path: "list",
+                element: <Suspense fallback={Loading}><Products_List/></Suspense>
+            }
+            ,
+            {
+                path: "register",
+                element: <Suspense fallback={Loading}><Products_Register/></Suspense>
+            }
+            ,
+            {
+                path: "read/:pno",
+                element: <Suspense fallback={Loading}><Products_Read/></Suspense>
+            }
+            ,
+            {
+                path: "modify/:pno",
+                element: <Suspense fallback={Loading}><Products_Modify/></Suspense>
+            }
         ]
       }
 ])
+
 
 export default router;

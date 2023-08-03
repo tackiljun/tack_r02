@@ -14,9 +14,8 @@ const ReadPage = () => {
     console.log(useQueryObj)
     console.log("------------------------")
     
-
     return ( 
-
+        
         <div>
             <div className="m-auto text-center">
                 BOARD READ PAGE
@@ -31,7 +30,7 @@ const ReadPage = () => {
                 LIST
             </button>
         </div>
-     );
+    );
 }
  
 export default ReadPage;

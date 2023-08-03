@@ -27,7 +27,7 @@ const TodoInput = () => {
                 SAVE
             </button>
         </div>
-     );
+    );
 }
  
 export default TodoInput;

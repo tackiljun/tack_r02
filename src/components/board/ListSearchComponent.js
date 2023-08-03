@@ -20,7 +20,6 @@ const ListSearchComponent = ({queryObj, moveSearch}) => {
     }, [queryObj])
     
     return ( 
-
         <div className="m-4 p-4 bg-blue-200 border-2">
             <select 
             className="m-2 p-2 border-2" 

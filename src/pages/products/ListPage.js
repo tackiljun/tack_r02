@@ -11,7 +11,7 @@ const ListPage = () => {
         console.log("NUM ------------" + num)
         queryObj.page = num
         setSearch({...queryObj})
-      }
+    }
 
     return ( 
       
@@ -19,10 +19,10 @@ const ListPage = () => {
             PRODUCTS LIST PAGE
 
             <ListComponent 
-          queryObj={queryObj} 
-          movePage = {movePage} 
-          moveRead = {moveRead}
-          ></ListComponent>
+            queryObj={queryObj} 
+            movePage = {movePage} 
+            moveRead = {moveRead}>
+            </ListComponent>
         </div>
      );
 }

@@ -31,35 +31,37 @@ const ListPage = () => {
   
     const movePage = (num) => {
   
-      console.log("NUM ------------" + num)
-      queryObj.page = num
-      setSearch({...queryObj})
+        console.log("NUM ------------" + num)
+        queryObj.page = num
+        setSearch({...queryObj})
     }
   
     const moveSearch = (type, keyword) => {
-      queryObj.page = 1
-      queryObj.type = type
-      queryObj.keyword = keyword
-  
-      setSearch({...queryObj})
+        queryObj.page = 1
+        queryObj.type = type
+        queryObj.keyword = keyword
+    
+        setSearch({...queryObj})
     }
 
     return ( 
+      
         <div>
-          <div className="m-auto text-center">
-            BOARD LIST PAGE
-          </div>
+            <div className="m-auto text-center">
+                BOARD LIST PAGE
+            </div>
           
-          <ListSearchComponent moveSearch={moveSearch} queryObj={queryObj}>
-          </ListSearchComponent>
+            <ListSearchComponent moveSearch={moveSearch} queryObj={queryObj}>
+            </ListSearchComponent>
     
-          <ListComponent 
-          queryObj={queryObj} 
-          movePage = {movePage} 
-          moveRead = {moveRead}
-          ></ListComponent>
+            <ListComponent 
+            queryObj={queryObj} 
+            movePage = {movePage} 
+            moveRead = {moveRead}
+            >
+            </ListComponent>
         </div>  
-       );
-    }
+     );
+}
  
 export default ListPage;

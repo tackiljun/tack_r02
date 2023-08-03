@@ -44,20 +44,20 @@ const ListComponent = ({queryObj, movePage, moveRead}) => {
                         key={dto.pno}
                         onClick={() => moveRead(dto.pno)} 
                         >
-                        <div>
-                            <div className=" font-extrabold">{dto.pno}</div>
-                            <div className="flex justify-center items-center">
-                                <img src={`http://localhost/s_${dto.fname}`} alt='ddd'></img>
-                            </div>
-                            <div className="text-center  font-extrabold">
-                                <div>
-                                    {dto.pname}-{dto.price}
+                            <div>
+                                <div className=" font-extrabold">{dto.pno}</div>
+                                <div className="flex justify-center items-center">
+                                    <img src={`http://localhost/s_${dto.fname}`} alt='ddd'></img>
                                 </div>
-                                <div>
-                                    리뷰 {dto.reviewCnt} - {dto.reviewAvg}
+                                <div className="text-center  font-extrabold">
+                                    <div>
+                                        {dto.pname}-{dto.price}
+                                    </div>
+                                    <div>
+                                        리뷰 {dto.reviewCnt} - {dto.reviewAvg}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </li>)}
                 </ul>
             </div>

@@ -14,7 +14,7 @@ const TodoList = () => {
                 {todoArr.map( (ele, idx) => <li key={{idx}}>{ele}</li>)}
             </ul>
         </div>
-     );
+    );
 }
  
 export default TodoList;

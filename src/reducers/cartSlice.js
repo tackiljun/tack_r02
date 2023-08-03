@@ -5,7 +5,6 @@ import axios from "axios";
 const initState = {
     items: [],
     loading: false
-
 }
 
 
@@ -40,7 +39,6 @@ const cartSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(addCartThunk.fulfilled, (state, action) => {
             console.log(action.payload)
-
             state.items = action.payload
         })
         .addCase(getCartThunk.fulfilled, (state, action) => {
