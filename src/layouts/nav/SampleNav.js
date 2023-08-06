@@ -15,7 +15,7 @@ const SampleNav = () => {
             
             <div className="m-auto text-3xl border-2">
                 <Link to="/" >MAIN</Link>
-                <span className="m-1 p-1 bg-white font-extrabold  ">
+                <span className="m-1 p-1 bg-white font-extrabold">
                     {todoArr.length}
                 </span>
             </div>
