@@ -1,6 +1,9 @@
 import { Cookies } from "react-cookie";
 
 
+// Cookie는 문자열만 사용 가능.
+// JSON.parse(문자열) : JSON 문자열을 JavaScript 값이나 객체 변환.
+// JSON.stringify(JSON데이터) : JavaScript 값이나 객체를 JSON 문자열로 변환.
 // 담는것 / 가져오는것.
 const cookies = new Cookies()
 
@@ -19,6 +22,7 @@ export const setCookie = (cookieName, value, days) => {
 
 export const getCookie = (cookieName) => {
 
+    // 문자열.
     return cookies.get(cookieName)
 }
 

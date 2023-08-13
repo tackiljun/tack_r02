@@ -2,17 +2,20 @@ import axios from "axios";
 import {getCookie, setCookie} from "../util/cookieUtil"
 
 
+// axios에 추가적인 옵션을 추가할 때 axios.create().
 // axios interceptor 총 4개 정의 
 const jwtAxios = axios.create()
 
 
+// https://axios-http.com/kr/docs/interceptors.
+// 요청이 전달되기 전에 작업 수행.
 const beforeReq = (config) => {
 
-    console.log("beforeRequest..........")
+    console.log("beforeRequest..........", config)
 
     const {accessToken}  = getCookie("login")
 
-    if(!accessToken){
+    if(!accessToken) {
         throw new Error("NO ACCESS TOKEN")
     }
     
@@ -22,19 +25,22 @@ const beforeReq = (config) => {
 }
 
 
+// 요청 오류가 있는 작업 수행.
 const requestFail = (err) => {
 
-    console.log("request fail..........")
+    console.log("request fail..........", err)
 
     return Promise.reject(err)
 }
 
 
+// 2xx 범위에 있는 상태 코드는 이 함수를 트리거 합니다.
+// 응답 데이터가 있는 작업 수행.
 const beforeRes = async(res) => {
 
     console.log("2xx Response..........")
 
-    if(res.data.error === 'Expired'){
+    if(res.data.error === 'Expired') {
 
         console.log("Access Token has expired")
         const newAccessToken = await refreshJWT()
@@ -83,6 +89,8 @@ const refreshJWT = async () => {
 }
 
 
+// 2xx 외의 범위에 있는 상태 코드는 이 함수를 트리거 합니다.
+// 응답 오류가 있는 작업 수행.
 const responseFail  = (err) => {
     console.log("response fail..........")
 
@@ -90,6 +98,7 @@ const responseFail  = (err) => {
 }
 
 
+// jwtAxios로 인터셉터할 때 사용할 것들을 정의.
 jwtAxios.interceptors.request.use(beforeReq, requestFail)
 jwtAxios.interceptors.response.use(beforeRes, responseFail)
 
