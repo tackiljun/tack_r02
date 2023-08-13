@@ -41,6 +41,7 @@ const LoginNav = () => {
             <Link to="/member/login">LOGIN</Link>
         </div>
      );
+     
 }
  
 export default LoginNav;

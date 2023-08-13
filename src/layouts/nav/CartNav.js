@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCartThunk } from "../../reducers/cartSlice";
+import { useNavigate } from "react-router-dom";
 
 
 const CartNav = () => {
@@ -12,7 +13,8 @@ const CartNav = () => {
     const {items} = useSelector(state => state.cart)
 
     const dispatch = useDispatch()
-
+    
+    // 로그인 시 cart개수를 가져오는 함수.
     useEffect(() => {
 
         if(!email) {
@@ -27,6 +29,7 @@ const CartNav = () => {
             CART {items.length}
         </div>
      );
+     
 }
  
 export default CartNav;
