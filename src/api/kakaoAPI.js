@@ -31,6 +31,7 @@ export const getAccessToken = async (authCode) => {
     const {access_token} = res.data
 
     return access_token
+
 }
 
 
@@ -57,4 +58,5 @@ export const getUserEmail = async (accessToken) => {
     console.log(kakao_account);
 
     return kakao_account.email
+    
 }
