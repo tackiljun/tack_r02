@@ -74,6 +74,7 @@ const ReadComponent = ({bno}) => {
         //     </div>
         // </div>
      );
+     
 }
  
 export default ReadComponent;

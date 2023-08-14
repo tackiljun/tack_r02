@@ -42,14 +42,15 @@ const RegisterComponent = ({moveList}) => {
             alert(`${rno}번 상품이 등록되었습니다.....`)
             moveList()
         }) 
+
     }
 
     const handleClickClear = (e) => {
-        
         fileRef.current.value = ''
     }
 
     return ( 
+
         <div className="m-2 p-2 ">
             <div className="m-auto p-2 w-1/3 bg-blue-200 border-2">
                 NAME <input 
@@ -99,7 +100,9 @@ const RegisterComponent = ({moveList}) => {
                 </button>
             </div>
         </div>
+
      );
+     
 }
  
 export default RegisterComponent;

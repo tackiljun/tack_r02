@@ -83,7 +83,9 @@ const ListComponent = ({queryObj, movePage, moveRead}) => {
             <ListPageComponent movePage={movePage} {...listData}>
             </ListPageComponent>
         </div>
+
      );
+     
 }
  
 export default ListComponent;

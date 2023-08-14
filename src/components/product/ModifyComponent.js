@@ -21,6 +21,7 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
         getProduct(pno).then(data => {
             setProduct(data)
         })
+
     }, [pno])
 
     const handleClickDelete = () => {
@@ -28,12 +29,14 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
         deleteProduct(pno).then(data => {
             alert("상품이 삭제되었습니다.....")
         })
+
     }
 
     const handleChange = (e) => {
 
         product[e.target.name] = e.target.value
         setProduct({...product})
+
     }
 
     const handleClickModify = () => {
@@ -64,6 +67,7 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
             alert("수정되었습니다.....")
             moveRead(pno)
         })
+
     }
 
     const handleClickDelImg = (fname) => {
@@ -72,9 +76,11 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
 
         product.images = newArr
         setProduct({...product})
+
     }
 
     return ( 
+
     <div className="">
         <div className="m-2 p-2 bg-blue-200 border-2">
             {product.pno}
@@ -150,7 +156,9 @@ const ModifyComponent = ({pno, moveList, moveRead}) => {
             </button>
         </div>
     </div>
+
      );
+     
 }
  
 export default ModifyComponent;

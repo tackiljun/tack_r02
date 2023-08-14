@@ -32,6 +32,7 @@ const ReadComponent = ({pno, moveModify, moveList}) => {
     }, [pno])
 
     return (
+
         <div className="m-2 p-2">
             <div className="m-auto p-2 w-1/5 bg-blue-200 border-2">
                 {product.pname}
@@ -72,7 +73,9 @@ const ReadComponent = ({pno, moveModify, moveList}) => {
               </button>
             </div>
         </div>
+
     );
+    
 }
 
 export default ReadComponent;

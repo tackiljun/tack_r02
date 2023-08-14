@@ -24,6 +24,7 @@ const LoginComponent = () => {
     console.log("ERRORMSG: " + errorMsg)
 
     return ( 
+
         <div>
             {/* 나중에 모달로 빼자 */}
             <div className="text-3xl bg-red-500">
@@ -60,11 +61,11 @@ const LoginComponent = () => {
                 </button>
             </div>
             <div>
-                
             </div>
-            
         </div>
+
      );
+
 }
  
 export default LoginComponent;
