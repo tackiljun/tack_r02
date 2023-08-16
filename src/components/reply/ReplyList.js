@@ -36,11 +36,13 @@ const ReplyList = ({bno, page, last, refresh, movePage, changeCurrent}) => {
             // console.log(last)
             console.log(data)
             setListData(data)
+
         })  
 
     }, [bno, page, refresh, last])
 
     return ( 
+
         <div className="m-auto">
             <div className="text-center">
                 REPLY LIST
@@ -85,7 +87,9 @@ const ReplyList = ({bno, page, last, refresh, movePage, changeCurrent}) => {
                 <ListPageComponent {...listData} movePage={movePage}></ListPageComponent>
             </div>
         </div>
+
      );
+     
 }
  
 export default ReplyList;

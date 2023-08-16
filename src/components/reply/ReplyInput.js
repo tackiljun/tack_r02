@@ -33,10 +33,13 @@ const ReplyInput = ({bno, refreshLast}) => {
             refreshLast()
 
             setReply({...initState})
+
         })
+
     }
  
     return ( 
+
         <div className="m-auto w-1/5 bg-blue-200 border-2">
             <div className="text-center">REPLY INPUT</div>
             <div className="m-2 text-center">
@@ -62,7 +65,9 @@ const ReplyInput = ({bno, refreshLast}) => {
                 </button>
             </div>
         </div>
+
      );
+     
 }
  
 export default ReplyInput;

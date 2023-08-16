@@ -44,6 +44,7 @@ const ReplyWrapper = ({bno}) => {
         data.last=false
         data.refresh = !data.refresh
         setData({...data})
+        
     }
 
     const refreshLast = () => {
@@ -66,7 +67,8 @@ const ReplyWrapper = ({bno}) => {
         setData({...data})
     }
    
-    return (  
+    return ( 
+
         <div>
             <ReplyInput bno={bno} refreshLast={refreshLast}>
             </ReplyInput>
@@ -78,7 +80,9 @@ const ReplyWrapper = ({bno}) => {
             <ReplyList {...data} movePage={movePage} changeCurrent={changeCurrent}>
             </ReplyList>
         </div>
+
     );
+
 }
  
 export default ReplyWrapper;

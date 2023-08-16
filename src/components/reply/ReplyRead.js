@@ -32,6 +32,7 @@ const ReplyRead = ({rno, cancleRead, refreshPage}) => {
             alert(`${data.result}번 댓글이 삭제되었습니다.....`)
             refreshPage()
         })
+
     }
 
     const handleChange = (e) => {
@@ -51,6 +52,7 @@ const ReplyRead = ({rno, cancleRead, refreshPage}) => {
     }
 
     return ( 
+
         <div className="m-auto w-1/4 bg-blue-200 border-2">
             <div className="text-center">REPLY READ {rno}</div>
             <div className="text-center">
@@ -76,7 +78,9 @@ const ReplyRead = ({rno, cancleRead, refreshPage}) => {
                 </button>
             </div>
         </div>
+
      );
+     
 }
  
 export default ReplyRead;
