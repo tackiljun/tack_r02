@@ -26,6 +26,7 @@ const useCustomLogin = (fn) => {
 
     }, [loginInfo.email])
     return {loginInfo}
+    
 }
  
 export default useCustomLogin;

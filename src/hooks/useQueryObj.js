@@ -15,6 +15,7 @@ const checkNull = (obj) => {
     }
 
     return result
+
 }
 
 
@@ -54,6 +55,7 @@ const useQueryObj = () => {
         navigate(`../modify/${bno}?${queryString}`)
     }
     return {queryObj, setSearch, moveRead, moveList, moveModify}
+    
 }
 
 export default useQueryObj
