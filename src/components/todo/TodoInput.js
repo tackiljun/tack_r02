@@ -13,6 +13,7 @@ const TodoInput = () => {
     }
     
     return ( 
+
         <div>
             TODO INPUT
             <input 
@@ -27,7 +28,9 @@ const TodoInput = () => {
                 SAVE
             </button>
         </div>
+
     );
+    
 }
  
 export default TodoInput;
