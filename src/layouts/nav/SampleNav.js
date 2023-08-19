@@ -8,6 +8,7 @@ const SampleNav = () => {
     const todoArr = useSelector(state => state.todo)
 
     return ( 
+
         <div className="flex m-4 p-4 bg-blue-200 font-extrabold justify-center">
             <div className="w-24 h-24">
                 <img src={require("../../images/GlassLogo.webp")}></img>
@@ -37,7 +38,9 @@ const SampleNav = () => {
                 USER <LoginNav></LoginNav>
             </div>
         </div>
+
      );
+     
 }
  
 export default SampleNav;
