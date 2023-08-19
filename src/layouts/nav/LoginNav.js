@@ -20,10 +20,13 @@ const LoginNav = () => {
         navigate("/")
 
         console.log("LogoutNav.....")
+
     }
 
     if(email !== '') {
+
         return (
+
             <div>
                 <div>
                     {email} - {nickname}
@@ -33,7 +36,9 @@ const LoginNav = () => {
                     <button className="border-2" onClick={handleClickLogout}>LOGOUT</button>
                 </div>
             </div>
+
         )
+        
     }
 
     return ( 

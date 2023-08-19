@@ -54,6 +54,7 @@ const useQueryObj = () => {
 
         navigate(`../modify/${bno}?${queryString}`)
     }
+    
     return {queryObj, setSearch, moveRead, moveList, moveModify}
     
 }
