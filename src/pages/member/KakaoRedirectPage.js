@@ -34,6 +34,7 @@ const KakaoRedirectPage = () => {
             } else {
                 navigate("/")
             }
+
         })
 
         // getAccessToken(authCode).then( accessToken => {
@@ -50,7 +51,9 @@ const KakaoRedirectPage = () => {
         <div>
             {authCode}
         </div>
+
      );
+     
 }
  
 export default KakaoRedirectPage;

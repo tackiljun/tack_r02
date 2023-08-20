@@ -34,14 +34,17 @@ const ListPage = () => {
         console.log("NUM ------------" + num)
         queryObj.page = num
         setSearch({...queryObj})
+
     }
   
     const moveSearch = (type, keyword) => {
+
         queryObj.page = 1
         queryObj.type = type
         queryObj.keyword = keyword
     
         setSearch({...queryObj})
+
     }
 
     return ( 
@@ -61,7 +64,9 @@ const ListPage = () => {
             >
             </ListComponent>
         </div>  
+
      );
+     
 }
  
 export default ListPage;

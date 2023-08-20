@@ -30,7 +30,9 @@ const ReadPage = () => {
                 LIST
             </button>
         </div>
+
     );
+    
 }
  
 export default ReadPage;
