@@ -11,6 +11,7 @@ const ListPage = () => {
         console.log("NUM ------------" + num)
         queryObj.page = num
         setSearch({...queryObj})
+
     }
 
     return ( 
@@ -24,7 +25,9 @@ const ListPage = () => {
             moveRead = {moveRead}>
             </ListComponent>
         </div>
+
      );
+     
 }
  
 export default ListPage;
