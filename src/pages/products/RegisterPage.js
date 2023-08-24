@@ -18,7 +18,9 @@ const RegisterPage = () => {
             moveList={moveList}>
             </RegisterComponent>
         </div>
+
      );
+     
 }
  
 export default RegisterPage;
