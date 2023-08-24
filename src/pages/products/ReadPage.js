@@ -27,7 +27,9 @@ const ReadPage = () => {
             moveList={moveList}>
             </ReadComponent>
         </div>
+
      );
+     
 }
  
 export default ReadPage;
