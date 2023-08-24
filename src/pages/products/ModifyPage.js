@@ -7,11 +7,14 @@ import useCustomLogin from "../../hooks/useCustomLogin";
 const ModifyPage = () => {
 
     const {loginInfo} = useCustomLogin( (nav) => {
+
         //console.log("function.....")
         nav('.../list')
+
     })
 
     const {queryObj, setSearch, moveRead, moveList, moveModify} = useQueryObj()
+
     // setSearch, moveRead, 안에 들어가?
     const {pno} = useParams()
 
@@ -28,7 +31,9 @@ const ModifyPage = () => {
             moveRead={moveRead}>
             </ModifyComponent>
         </div>
+
      );
+     
 }
  
 export default ModifyPage;
