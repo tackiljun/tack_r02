@@ -20,7 +20,9 @@ const IndexPage = () => {
                 <Outlet></Outlet>
             </div>
         </BasicLayout>
+
      );
+     
 }
  
 export default IndexPage;
