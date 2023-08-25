@@ -28,6 +28,7 @@ export const getCartThunk = createAsyncThunk('getCartThunk', async(email) => {
     const res = await axios.get(`http://localhost:8080/api/cart/${email}`)
 
     return res.data
+    
 })
 
 
@@ -44,13 +45,16 @@ const cartSlice = createSlice({
 
             console.log(action.payload)
             state.items = action.payload
+
         })
         .addCase(getCartThunk.fulfilled, (state, action) => {
 
             console.log("getCartThunk fullfilled.....")
             console.log(action.payload)
             state.items = action.payload
+
         })
+
     }
 
 })
