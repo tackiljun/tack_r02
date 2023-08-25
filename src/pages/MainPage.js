@@ -20,7 +20,9 @@ const MainPage = () => {
                 src={require("../images/GlassMainimg.jpg")}/>
             </div>
         </BasicLayout>
+
      );
+     
 }
  
 export default MainPage;
