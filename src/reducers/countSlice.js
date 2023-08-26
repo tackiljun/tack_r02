@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // createSlice - 금고역할.
 const countSlice = createSlice({
+
     name: "CountSlice",
     // 초기상태.
     initialState: {num: 5},
@@ -30,6 +31,7 @@ const countSlice = createSlice({
             return {num: state.num - param.payload}
         }
     }
+    
 })
 
 
